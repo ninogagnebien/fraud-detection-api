@@ -110,7 +110,7 @@ function displayResult(result) {
                 
                 <div class="detail-item">
                     <span class="label">Recommandation:</span>
-                    <span class="value recommendation-${result.recommendation.toLowerCase()}">${result.recommendation}</span>
+                    <span class="value recommendation-${result.recommendation.toLowerCase()}">${result.recommendation || 'Non défini'}</span>
                 </div>
             </div>
             
