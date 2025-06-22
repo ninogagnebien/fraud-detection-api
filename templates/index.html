@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détecteur de Fraude Immobilière - POC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏠 Détecteur de Fraude Immobilière</h1>
+            <p>Testez votre annonce immobilière pour détecter d'éventuelles fraudes</p>
+        </header>
+
+        <div class="form-section">
+            <h2>Tester une Annonce</h2>
+            
+            <div class="examples">
+                <button onclick="loadExample(0)" class="btn btn-secondary">Charger Exemple Frauduleux</button>
+                <button onclick="loadExample(1)" class="btn btn-secondary">Charger Exemple Légitime</button>
+            </div>
+
+            <form id="fraud-form">
+                <div class="form-group">
+                    <label for="title">Titre de l'annonce *</label>
+                    <input type="text" id="title" name="title" required 
+                           placeholder="Ex: Appartement 2 pièces Marina Bay">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" name="description" required 
+                              placeholder="Description détaillée de l'annonce..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="price">Prix (SGD) *</label>
+                        <input type="number" id="price" name="price" required 
+                               placeholder="3500" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area_sqm">Surface (m²) *</label>
+                        <input type="number" id="area_sqm" name="area_sqm" required 
+                               placeholder="75" min="0">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="location">Localisation</label>
+                        <select id="location" name="location">
+                            <option value="Orchard">Orchard</option>
+                            <option value="Bukit Timah">Bukit Timah</option>
+                            <option value="Tampines">Tampines</option>
+                            <option value="Hougang">Hougang</option>
+                            <option value="Toa Payoh">Toa Payoh</option>
+                            <option value="Jurong">Jurong</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="account_age_days">Âge du compte (jours) *</label>
+                        <input type="number" id="account_age_days" name="account_age_days" 
+                               required placeholder="365" min="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="contact_verified" name="contact_verified">
+                        Contact vérifié
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submit-btn">
+                    🔍 Analyser l'Annonce
+                </button>
+            </form>
+        </div>
+
+        <div id="result-section" class="result-section" style="display: none;">
+            <h2>Résultat de l'Analyse</h2>
+            <div id="result-content"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

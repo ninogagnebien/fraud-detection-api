@@ -1,0 +1,35 @@
+[
+  {
+    "listing_id": "test_001",
+    "title": "Urgent! Best Price in Tampines - Act Fast!",
+    "description": "Direct from owner. No agent fee! Pay deposit to secure. No viewing needed. Fake listings beware - this is real!",
+    "price": 800,
+    "area_sqm": 45,
+    "price_per_sqm": 17.8,
+    "account_age_days": 15,
+    "contact_verified": false,
+    "location": "Tampines"
+  },
+  {
+    "listing_id": "test_002",
+    "title": "Premium Location: Orchard 85 sqm Residence",
+    "description": "Newly renovated unit with great ventilation and natural lighting. Walking distance to shopping and schools.",
+    "price": 3200,
+    "area_sqm": 85,
+    "price_per_sqm": 37.6,
+    "account_age_days": 650,
+    "contact_verified": true,
+    "location": "Orchard"
+  },
+  {
+    "listing_id": "test_003",
+    "title": "Cheap deal in Hougang - Limited Time!",
+    "description": "Too good to miss! Contact immediately. Great value in Hougang. No background checks required.",
+    "price": 1200,
+    "area_sqm": 60,
+    "price_per_sqm": 20.0,
+    "account_age_days": 35,
+    "contact_verified": false,
+    "location": "Hougang"
+  }
+]
