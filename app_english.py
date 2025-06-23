@@ -137,9 +137,9 @@ def get_examples():
             "data": {
                 "title": "Urgent! Cheap apartment in Orchard - Act Fast!",
                 "description": "No viewing needed, pay deposit to secure. Direct from owner, no agent fee!",
-                "price": 800,
+                "price": 700,
                 "area_sqm": 50,
-                "price_per_sqm": 16,
+                "price_per_sqm": 14,
                 "location": "Orchard",
                 "contact_verified": False,
                 "account_age_days": 15

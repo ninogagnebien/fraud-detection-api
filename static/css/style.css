@@ -31,7 +31,8 @@ body {
     font-weight: 700;
     letter-spacing: -1px;
     color: #222;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .header p {
@@ -132,8 +133,14 @@ button {
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
-    margin: 0.5rem 0.5rem 1.5rem 0;
+    /* margin: 0.5rem 0.5rem 1.5rem 0; */
     transition: background 0.2s, box-shadow 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 button:hover {
