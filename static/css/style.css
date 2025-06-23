@@ -5,34 +5,47 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+    font-family: 'San Francisco', 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #222;
+    margin: 0;
     min-height: 100vh;
 }
 
 .container {
+    background: #fff;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 2rem auto;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(60, 60, 60, 0.08), 0 1.5px 4px rgba(0, 0, 0, 0.04);
+    padding: 2.5rem 2rem;
 }
 
-header {
+.header {
     text-align: center;
-    margin-bottom: 40px;
-    color: white;
+    padding: 2rem 0 1rem 0;
 }
 
-header h1 {
+.header h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #222;
+    margin-bottom: 0.5rem;
 }
 
-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+.header p {
+    color: #555;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #222;
+    text-align: center;
 }
 
 .form-section {
@@ -40,7 +53,7 @@ header p {
     border-radius: 12px;
     padding: 30px;
     margin-bottom: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .form-section h2 {
@@ -72,19 +85,25 @@ label {
     color: #4a5568;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     width: 100%;
-    padding: 12px;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.2s;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f3f4f6;
+    font-size: 1rem;
+    transition: border 0.2s;
+    outline: none;
 }
 
-input:focus, textarea:focus, select:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+input:focus,
+textarea:focus,
+select:focus {
+    border: 1.5px solid #6366f1;
+    background: #fff;
 }
 
 textarea {
@@ -103,51 +122,30 @@ textarea {
     margin-right: 10px;
 }
 
-.btn {
-    padding: 12px 24px;
+button {
+    background: linear-gradient(90deg, #6366f1 0%, #60a5fa 100%);
+    color: #fff;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 12px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
-    display: inline-block;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+    margin: 0.5rem 0.5rem 1.5rem 0;
+    transition: background 0.2s, box-shadow 0.2s;
 }
 
-.btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    width: 100%;
-}
-
-.btn-primary:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-}
-
-.btn-primary:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-    transform: none;
-}
-
-.btn-secondary {
-    background: #f7fafc;
-    color: #4a5568;
-    border: 2px solid #e2e8f0;
-}
-
-.btn-secondary:hover {
-    background: #edf2f7;
-    border-color: #cbd5e0;
+button:hover {
+    background: linear-gradient(90deg, #818cf8 0%, #38bdf8 100%);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.12);
 }
 
 .result-section {
     background: white;
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .result-card {
@@ -201,7 +199,7 @@ textarea {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 6px;
 }
 
@@ -286,44 +284,30 @@ textarea {
     margin: 0 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .container {
-        padding: 10px;
+        padding: 1.2rem 0.5rem;
+        max-width: 98vw;
     }
-    
-    header h1 {
+
+    .header h1 {
         font-size: 2rem;
-    }
-    
-    .form-section {
-        padding: 20px;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .examples {
-        flex-direction: column;
-    }
-    
-    .result-header {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .detail-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
     }
 }
 
 /* Animation de chargement */
 @keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .loading {

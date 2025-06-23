@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Fraud Detector - POC</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -25,27 +26,25 @@
             <form id="fraud-form">
                 <div class="form-group">
                     <label for="title">Listing Title *</label>
-                    <input type="text" id="title" name="title" required 
-                           placeholder="e.g., 2-bedroom apartment in Marina Bay">
+                    <input type="text" id="title" name="title" required
+                        placeholder="e.g., 2-bedroom apartment in Marina Bay">
                 </div>
 
                 <div class="form-group">
                     <label for="description">Description *</label>
-                    <textarea id="description" name="description" required 
-                              placeholder="Detailed description of the listing..."></textarea>
+                    <textarea id="description" name="description" required
+                        placeholder="Detailed description of the listing..."></textarea>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="price">Price (SGD) *</label>
-                        <input type="number" id="price" name="price" required 
-                               placeholder="3500" min="0">
+                        <input type="number" id="price" name="price" required placeholder="3500" min="0">
                     </div>
 
                     <div class="form-group">
                         <label for="area_sqm">Area (sqm) *</label>
-                        <input type="number" id="area_sqm" name="area_sqm" required 
-                               placeholder="75" min="0">
+                        <input type="number" id="area_sqm" name="area_sqm" required placeholder="75" min="0">
                     </div>
                 </div>
 
@@ -64,8 +63,8 @@
 
                     <div class="form-group">
                         <label for="account_age_days">Account Age (days) *</label>
-                        <input type="number" id="account_age_days" name="account_age_days" 
-                               required placeholder="365" min="0">
+                        <input type="number" id="account_age_days" name="account_age_days" required placeholder="365"
+                            min="0">
                     </div>
                 </div>
 
@@ -90,4 +89,5 @@
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
+
 </html>
